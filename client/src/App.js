@@ -24,7 +24,7 @@ function App() {
 
 
     (async ()=>{
-      const res = await fetch("http://localhost:8080/product")
+      const res = await fetch(`${process.env.REACT_APP_SERVER_DOMAIL}/product`)
       const resData = await res.json();
       
       dispatch(setDatProduct(resData))
