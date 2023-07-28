@@ -39,7 +39,7 @@ function NewProduct() {
     if (name && category && image && price) {
       try {
         const response = await axios.post(
-          "http://localhost:8080/newProduct",
+          `${process.env.REACT_APP_SERVER_DOMAIL}/newProduct`,
           data,
           {
             headers: {
