@@ -46,7 +46,7 @@ function SignUp() {
       if (password === confirmPassword) {
         try {
           const response = await axios.post(
-            "http://localhost:8080/signup",
+            `${process.env.REACT_APP_SERVER_DOMAIL}/signup`,
             data,
             {
               headers: {
