@@ -44,7 +44,7 @@ function Login() {
 
     if (email && password) {
       try {
-        const response = await axios.post("http://localhost:8080/login", data, {
+        const response = await axios.post(`${process.env.REACT_APP_SERVER_DOMAIL}/login`, data, {
           headers: {
             "Content-Type": "application/json",
           },
