@@ -168,8 +168,8 @@ app.post("/create-checkout-session", async (req, res) => {
         };
       }),
 
-      success_url: "http://localhost:3000/success",
-      cancel_url: "http://localhost:3000/cancel",
+      success_url: `${FRONTEND_URL}/success`,
+      cancel_url: `${FRONTEND_URL}/cancel`,
     };
 
     const session = await stripe.checkout.sessions.create(params);
